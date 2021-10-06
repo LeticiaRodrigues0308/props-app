@@ -15,6 +15,9 @@ const ContainerHome = styled.div`
     flex-wrap: wrap;
   }
 
+  h1 {
+    text-decoration: underline #F837B2;
+  }
 `
 
 

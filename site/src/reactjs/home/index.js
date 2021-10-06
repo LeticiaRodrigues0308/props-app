@@ -1,16 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ContainerHome } from "./styled";
 import Product from "../product";
+import Cookie from 'js-cookie'
 
 
 export default function Home(){
-    const [produtos, setProdutos] = useState([]);
+    const [products, setProducts] = useState([]);
 
-    function list(){
+    useEffect(uploadHome, []);
+
+    function uploadHome() {
+        let home = Cookie.get('home');
+        home = home !==  undefined
+                ? JSON.parse(home)
+                : [];
+        
+        setProducts(home);
+    }
+
+    function uploadHome(){
         const l = [
                 {
                     id: 10001,
-                    image: "https://http2.mlstatic.com/D_NQ_NP_755842-MLB47599396706_092021-O.webp",
+                    image: "https://images-americanas.b2w.io/produtos/01/00/img/1871094/7/1871094786_1SZ.jpg",
                     title: "PC Gamer linha premium",
                     price: "R$ 19.654,00",
                     description: "Computador T-Home AMD Cardinal 4700S, 16GB, 240GB, RX 550 2GB LVL 1",
@@ -18,7 +30,7 @@ export default function Home(){
                   },
                   {
                     id: 10002,
-                    image: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/m/c/mcr-fnr-pp0131.jpg",
+                    image: "https://images-americanas.b2w.io/produtos/3162943378/imagens/combo-teclado-mouse-gamer-led-usb-t400-dpi-jogos-pc-notebook/3162943378_1_xlarge.jpg",
                     title: "Combo Gamer",
                     price: "R$ 1.350,00",
                     description: "T-Dagger Legion 4 em 1, Teclado, Mouse, Headset e Mousepad, T-TGS003 PT",
@@ -26,15 +38,14 @@ export default function Home(){
                   },
                   {
                     id: 10003,
-                    image: "https://images-americanas.b2w.io/produtos/1846627018/imagens/teclado-gamer-de-uma-mao-hxsj-j50-com-led-mouse-gamer-iluminado-com-fio/1846627018_1_large.jpg",
+                    image: "https://ecadeiraslegacy.vteximg.com.br/arquivos/ids/165302/cadeira-gamer-tanker-em-pvc-e-tecido-sintetico-giratoria-reclinavel-roxa-e-preta-com-braco-a-default-EC000019937.jpg?v=637449615186400000",
                     title: "Cadeira Gamer RGB",
                     price: "R$ 2.120,00",
                     description: "Elements Veda Lux, RGB, Reclinável",
                     specifications: "Esse produto é de ótima qualidade você não vai se arrepender jamais na sua vidinha!!" 
                   }
         ]
-        setProdutos(l)
-        console.log(l)
+        setProducts(l);
     }
  
 
@@ -43,10 +54,8 @@ export default function Home(){
 
             <h1>Sejam bem-vindos!!</h1>
 
-            <button onClick={list}>Listar</button>
-
             <div className="products">
-                {produtos.map(item => 
+                {products.map(item => 
                     <Product info={item}/>
                 )}
             </div>
