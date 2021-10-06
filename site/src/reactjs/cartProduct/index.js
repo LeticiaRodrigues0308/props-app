@@ -1,6 +1,6 @@
 import { ContainerCart } from "./styled";
 import { Link } from "react-router-dom";
-import Cookie from 'react-router-dom';
+import Cookie from 'js-cookie';
 import { useEffect, useState } from "react";
 import CartItem from "./cartItem";
 
@@ -12,7 +12,7 @@ export default function Cart(){
 
     function uploadCart() {
         let cart = Cookie.get('cart');
-        cart = cart != null
+        cart = cart !==  undefined
                 ? JSON.parse(cart)
                 : [];
         

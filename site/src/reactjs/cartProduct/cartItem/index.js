@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ContainerCartItem, RemoveIcon } from "./styled";
-import Counter from "../counter";
+import Counter from "../counter"; 
 
 
 export default function CartItem(props) {
@@ -30,7 +30,7 @@ export default function CartItem(props) {
 
             <div className="price">
                 <span>Preço unitário</span>
-                {products.title}
+                {products.price}
             </div>
 
             <div className="qtd">

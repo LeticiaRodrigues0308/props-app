@@ -5,6 +5,7 @@ const ContainerCounter = styled.div`
   display: flex;
   flex-direction: row;
   font-weight: 400;
+  font-family: Roboto;
 
   & > * {
     margin: .5em;
@@ -13,7 +14,7 @@ const ContainerCounter = styled.div`
     user-select: none;
   }
 
-  .menos {
+  .minus {
     border-radius: 100%;
     cursor: pointer;
   }
@@ -22,7 +23,7 @@ const ContainerCounter = styled.div`
     padding: 0.3em 1em;
   }
 
-  .mais {
+  .plus {
     border-radius: 100%;
     cursor: pointer;
   }

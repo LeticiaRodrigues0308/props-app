@@ -10,7 +10,7 @@ export default function DetailProduct(props){
 
     function buy(){
         let cart = Cookie.get('cart');
-        cart = cart != null
+        cart = cart !== undefined
                 ? JSON.parse(cart)
                 : [];
 

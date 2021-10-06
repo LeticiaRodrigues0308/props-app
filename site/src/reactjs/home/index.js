@@ -10,7 +10,7 @@ export default function Home(){
         const l = [
                 {
                     id: 10001,
-                    image: "https://img.terabyteshop.com.br/produto/g/gabinete-gamer-gamdias-argus-e4-elite-rgb-mid-tower-vidro-temperado-black-sem-fonte-com-1-fan_121133.png",
+                    image: "https://http2.mlstatic.com/D_NQ_NP_755842-MLB47599396706_092021-O.webp",
                     title: "PC Gamer linha premium",
                     price: "R$ 19.654,00",
                     description: "Computador T-Home AMD Cardinal 4700S, 16GB, 240GB, RX 550 2GB LVL 1",
@@ -18,7 +18,7 @@ export default function Home(){
                   },
                   {
                     id: 10002,
-                    image: "https://img.terabyteshop.com.br/produto/g/combo-gamer-t-dagger-legion-4-em-1-teclado-mouse-headset-e-mousepad-t-tgs003_117551.png",
+                    image: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/m/c/mcr-fnr-pp0131.jpg",
                     title: "Combo Gamer",
                     price: "R$ 1.350,00",
                     description: "T-Dagger Legion 4 em 1, Teclado, Mouse, Headset e Mousepad, T-TGS003 PT",
@@ -26,7 +26,7 @@ export default function Home(){
                   },
                   {
                     id: 10003,
-                    image: "https://img.terabyteshop.com.br/produto/g/cadeira-gamer-elements-veda-lux-rgb-reclinavel_119306.jpg",
+                    image: "https://images-americanas.b2w.io/produtos/1846627018/imagens/teclado-gamer-de-uma-mao-hxsj-j50-com-led-mouse-gamer-iluminado-com-fio/1846627018_1_large.jpg",
                     title: "Cadeira Gamer RGB",
                     price: "R$ 2.120,00",
                     description: "Elements Veda Lux, RGB, Reclinável",
@@ -34,6 +34,7 @@ export default function Home(){
                   }
         ]
         setProdutos(l)
+        console.log(l)
     }
  
 

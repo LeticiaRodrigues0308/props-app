@@ -6,7 +6,9 @@ const ContainerCartItem = styled.div`
   align-items: center;
   width: 60%;
 
-  font: 700 1em Roboto;
+  font-weight: 700;
+  font-size: 1em;
+  font-family: Roboto;
 
   & > div {
     margin: 2em 0em;
@@ -20,6 +22,7 @@ const ContainerCartItem = styled.div`
 
   span {
     font-weight: 400 !important;
+    margin-bottom: .5em;
   }
   
   img {
@@ -30,6 +33,11 @@ const ContainerCartItem = styled.div`
   .remover img {
     width: 3em;
     cursor: pointer;
+  }
+
+  .price, .qtd {
+    display: flex;
+    flex-direction: column;
   }
 `
 
